@@ -25,7 +25,8 @@ sleep 10
 # add handson contents into the container
 docker exec jupyter git clone https://github.com/irixjp/aitac-automation-handson.git
 
-PUB_IP=`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+#PUB_IP=`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+PUB_IP=`curl -s ipinfo.io|jq .ip`
 echo ''
 echo ''
 echo 'Access to the below url'
